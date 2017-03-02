@@ -1,12 +1,13 @@
-var gulp = require("gulp");
-var less = require("gulp-less");
-var nano = require("gulp-cssnano");
-var sourcemaps = require("gulp-sourcemaps");
-var concat = require("gulp-concat");
-var gulpIf = require("gulp-if");
-var uglify = require("gulp-uglify");
-var autoprefixer = require("gulp-autoprefixer");
-var sync = require("browser-sync").create();
+var gulp = require("gulp"),
+    less = require("gulp-less"),
+    nano = require("gulp-cssnano"),
+    sourcemaps = require("gulp-sourcemaps"),
+    concat = require("gulp-concat"),
+    gulpIf = require("gulp-if"),
+    uglify = require("gulp-uglify"),
+    autoprefixer = require("gulp-autoprefixer"),
+    sync = require("browser-sync").create(),
+    imageMin = require("gulp-imagemin");
 
 
 var isDevelopment = true;
@@ -23,7 +24,7 @@ gulp.task("js:own", function() {
 gulp.task("js:vendor", function() {
     return gulp.src([
         "node_modules/jquery/dist/jquery.js",
-        "node_modules/bootstrap/dist/js/bootstrap.js",
+        "node_modules/bootstrap/dist/js/bootstrap.js"
     ])
         .pipe(concat("vendor.js"))
         .pipe(gulpIf(!isDevelopment, uglify()))
@@ -33,7 +34,7 @@ gulp.task("js:vendor", function() {
 
 gulp.task("css:vendor", function() {
     return gulp.src([
-        "node_modules/bootstrap/dist/css/bootstrap.css",
+        "node_modules/bootstrap/dist/css/bootstrap.css"
     ])
         .pipe(gulpIf(!isDevelopment, nano()))
         .pipe(concat("vendor.css"))
@@ -59,6 +60,12 @@ gulp.task("html", function() {
         .pipe(gulp.dest("dist"));
 });
 
+gulp.task("image", function () {
+    return gulp.src("src/images/*")
+        .pipe(imageMin())
+        .pipe(gulp.dest("dist/images"))
+});
+
 
 gulp.task("css", ["css:own", "css:vendor"]);
 gulp.task("js", ["js:own", "js:vendor"]);
@@ -75,5 +82,5 @@ gulp.task("watch", ["build"] ,function () {
     gulp.watch("dist/*.html").on("change", sync.reload);
 });
 
-gulp.task("build", ["html", "css", "js"]);
+gulp.task("build", ["html", "css", "js", "image"]);
 gulp.task("default", ["build", "watch"]);
