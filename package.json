@@ -1,12 +1,12 @@
 {
   "name": "final-project",
   "version": "1.0.0",
-  "description": "",
+  "description": "Web project for building company",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
+  "author": "Anton Kopchak",
   "license": "ISC",
   "dependencies": {
     "bootstrap": "^3.3.7",

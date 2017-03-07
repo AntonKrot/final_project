@@ -66,7 +66,6 @@ gulp.task("image", function () {
         .pipe(gulp.dest("dist/images"))
 });
 
-
 gulp.task("css", ["css:own", "css:vendor"]);
 gulp.task("js", ["js:own", "js:vendor"]);
 
@@ -80,6 +79,8 @@ gulp.task("watch", ["build"] ,function () {
     gulp.watch("dist/js/*.js").on("change", sync.reload);
     gulp.watch("src/*.html", ["html"]);
     gulp.watch("dist/*.html").on("change", sync.reload);
+    gulp.watch("src/images/*", ["image"]);
+    gulp.watch("dist/images/*").on("change", sync.reload);
 });
 
 gulp.task("build", ["html", "css", "js", "image"]);
