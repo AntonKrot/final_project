@@ -9,9 +9,9 @@
 <body>
 <div class="wrapper">
     <header class="header">
-        <div class="container">
-            <div class="contact">
-                <div class="row contact-row">
+        <div class="contact">
+            <div class="container">
+                <div class="row">
                     <div class="col-lg-3">
                         <div class="contact__logo">
                             <a class="logo__link" href="/index.html"><img src="/images/logo.png" alt="Logo"/></a>
@@ -47,11 +47,12 @@
                                 <img  class="location__img-way" src="/images/microphone.png" alt="location">
                                 <div class="location__value">
                                     <h2 class="location__value__name">Call Us NOw</h2>
-                                    <p class="location__value__map">801 88 1472</p>
+                                    <p class="location__value__map"><a href="tel:0801881472">801-88-1472</a></p>
                                 </div>
                             </div>
                         </div>
                     </div>
+                </div>
             </div>
         </div>
         <nav class="navbar navbar-default">
@@ -77,7 +78,6 @@
                 </div>
             </div>
         </nav>
-        </div>
         <button class="menu__button">Get a Quote</button>
         <div class="slider">
             <div class="container-fluid-pic">
@@ -101,16 +101,16 @@
         <!--FIRST-SECTION-->
         <section class="first-section">
             <div class="container">
-                <div class="first-section__part_one pull-left">
-                    <h3 class="part_one__name">Services</h3>
-                    <p class="part_one__par">Lorem ispum dolar set ament have a lorem</p>
+                <div class="first-section__part-one pull-left">
+                    <h3 class="part-one__name">Services</h3>
+                    <p class="part-one__desc">Lorem ispum dolar set ament have a lorem</p>
                 </div>
                 <div class="first-section__part_two pull-right">
                     <a href="#" class="btn btn-link button-img"><img src="images/leare.png" alt="left btn"></a>
                     <a href="#" class="btn btn-link button-img"><img src="images/leare__two.png" alt="right btn"></a>
                 </div>
             </div>
-            <div class="container">
+            <div class="container first-section__sevices">
                 <div class="row">
                     <div class="col-lg-4">
                         <div class="first-section__row-sec">
@@ -200,6 +200,7 @@
                 </div>
             </div>
         </section>
+        <!-- / FIRST-SECTION-->
         <!--DESCRIPTION-->
         <section class="distr">
             <div class="container-fluid">
@@ -231,18 +232,117 @@
                 </div>
             </div>
         </section>
-<!--SECOND-SECTION-->
-        <section class="second__section">
+        <!--/ DESCRIPTION-->
+        <!--SECOND-SECTION-->
+        <section class="second-section">
             <div class="container">
-                <div class="second_section__part_one pull-left">
-                    <h3 class="part_one__name">Portfolio</h3>
-                    <p class="part_one__par">Lorem ispum dolar set ament have a lorem</p>
+                <div class="second-section__part-one pull-left">
+                    <h3 class="part-one__name">Portfolio</h3>
+                    <p class="part-one__desc">Lorem ispum dolar set ament have a lorem</p>
                 </div>
-                <div class="second_section__part_two pull-right">
-
+                <div class="second-section__part-two pull-right">
+                    <ul class="filter">
+                        <li><a class="active" href="#" data-filter="*">All</a></li>
+                        <li><a href="#" data-filter=".branding">Wall lights</a></li>
+                        <li><a href="#" data-filter=".poster">Lights</a></li>
+                        <li><a href="#" data-filter=".illustration">Decoration</a></li>
+                        <li><a href="#" data-filter=".illustration">Interior</a></li>
+                        <li><a href="#" data-filter=".illustration">Exterior</a></li>
+                        <li><a href="#" data-filter=".illustration">Misc</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="container second-section__building">
+                <div class="row">
+                    <div class="col-lg-5">
+                        <div class="thumbnail">
+                            <img src="/images/thumbnail__img.png" alt="construction">
+                            <div class="caption">
+                                <span class="caption__left-element">
+                                    <p class="caption__name">Building</p>
+                                    </span>
+                                <h3 class="caption__title">Construction New Building</h3>
+                                <p class="caption__desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque enim exercitationem fugiat fugit maxime nam nesciunt porro quibusdam quis similique!</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3">
+                        <div class="filling">
+                            <img src="/images/filling__img1.png" alt="" class="filling__img">
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="filling">
+                            <img src="/images/filling__img2.png" alt="" class="filling__img">
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="filling">
+                            <img src="/images/filling__img3.png" alt="" class="filling__img">
+                        </div>
+                    </div>
+                    <div class="col-lg-3">
+                        <div class="filling">
+                            <img src="/images/filling__img4.png" alt="" class="filling__img">
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="filling">
+                            <img src="/images/filling__img5.png" alt="" class="filling__img">
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="filling">
+                            <img src="/images/filling__img5.png" alt="" class="filling__img">
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="filling">
+                            <img src="/images/filling__img5.png" alt="" class="filling__img">
+                        </div>
+                    </div>
+                    <button class="building__button">Read more</button>
                 </div>
             </div>
         </section>
+        <!--/SECOND-SECTION-->
+        <!--WORK-LINE-->
+        <section class="work-line">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-7">
+                        <h3 class="work-line__title">What are you working on</h3>
+                        <p class="work-line__desc">Download <span>PDF File</span> our free Construction <span>pricing planners</span> for you projects</p>
+                    </div>
+                    <div class="col-lg-5">
+                        <button class="work-line__button">Read more</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--/WORK-LINE-->
+        <!--THIRD-SECTION-->
+        <section class="third-section">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6">
+                        <div class="third-section__poster">
+                            <img src="/images/third-section.png" alt="third-section">
+                            <p>Application Form</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <form action="#">
+                            <input type="text" placeholder="Full Name">
+                            <input type="email" placeholder="Email Address">
+                            <input type="number" placeholder="Contact Number">
+
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--/THIRD-SECTION-->
     </main>
 </div>
 <footer class="footer">
