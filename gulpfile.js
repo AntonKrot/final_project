@@ -7,7 +7,9 @@ var gulp = require("gulp"),
     uglify = require("gulp-uglify"),
     autoprefixer = require("gulp-autoprefixer"),
     sync = require("browser-sync").create(),
-    imageMin = require("gulp-imagemin");
+    imageMin = require("gulp-imagemin"),
+    fontMin = require("gulp-fontmin");
+
 
 
 var isDevelopment = true;
@@ -66,6 +68,14 @@ gulp.task("image", function () {
         .pipe(gulp.dest("dist/images"))
 });
 
+
+gulp.task('font', function () {
+    return gulp.src('src/fonts/*.ttf')
+        .pipe(fontMin())
+        .pipe(gulp.dest('dist/fonts'));
+});
+
+
 gulp.task("css", ["css:own", "css:vendor"]);
 gulp.task("js", ["js:own", "js:vendor"]);
 
@@ -81,7 +91,9 @@ gulp.task("watch", ["build"] ,function () {
     gulp.watch("dist/*.html").on("change", sync.reload);
     gulp.watch("src/images/*", ["image"]);
     gulp.watch("dist/images/*").on("change", sync.reload);
+    gulp.watch("src/fonts/*.ttf", ["font"]);
+    gulp.watch("dist/fonts/*").on("change", sync.reload);
 });
 
-gulp.task("build", ["html", "css", "js", "image"]);
+gulp.task("build", ["html", "css", "js", "image", "font"]);
 gulp.task("default", ["build", "watch"]);

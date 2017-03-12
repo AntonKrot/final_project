@@ -40,7 +40,7 @@
 
   &__name {
     font-size: 16px;
-    //font-family: "Roboto";
+    font-family: Roboto-Medium, sans-serif;
     color: rgb(211, 211, 211);
     text-transform: uppercase;
     padding-left: 20px;
@@ -50,7 +50,7 @@
   &__map {
     padding-left: 20px;
     font-size: 14px;
-    //font-family: "Roboto";
+    font-family: Roboto-Light, sans-serif;
     color: rgb(183, 183, 183);
 
     & a {
@@ -80,7 +80,7 @@
   &-nav {
     text-transform: uppercase;
     font-size: 14px;
-    //font-family: "Roboto";
+    font-family: Roboto-Bold, sans-serif;
     font-weight: bold;
 
     &  li  a {
@@ -121,7 +121,7 @@
   width: 170px;
   background: #ffb300;
   font-size: 16px;
-  //font-family: "Montserrat";
+  font-family: Montserrat-Bold, sans-serif;
   color: #000000;
   font-weight: bold;
   text-transform: uppercase;
@@ -129,6 +129,8 @@
   text-align: center;
   z-index: 2;
 }
+
+// ---- /NAVBAR ---- //
 
 .container-fluid-pic {
   position: absolute;
@@ -146,17 +148,32 @@
 }
 
 .row-pic__text-first {
-  //font-family: Lato-Black sans-serif;
+  font-family: Montserrat-Bold, sans-serif;
   font-weight: bold;
   font-size: 60px;
   text-transform: uppercase;
   color: #ffffff !important;
   display: inline-block;
-  padding: 10px 0 10px 0;
+  padding: 10px 0 10px 15px;
+  position: relative;
+  box-sizing: border-box;
+
+  &:before {
+    content: "";
+    position: absolute;
+    border: 3px solid #ffb300;
+    top: 5px;
+    left: 0;
+    bottom: 0;
+    width: 25px;
+    height: 25px;
+    border-bottom: none;
+    border-right: none;
+  }
 
   &-color {
     color: #ffb300 ;
-    //font-family: Lato-Black sans-serif;
+    font-family: Montserrat-Bold, sans-serif;
     font-weight: bold;
     font-size: 60px;
     text-transform: uppercase;
@@ -167,26 +184,43 @@
 
 .row-pic__text-second {
   color: #FFFFFF;
-  //font-family: Lato-Light sans-serif;
+  font-family: Montserrat-Regular, sans-serif;
   font-size: 40px;
+  padding: 10px 15px 10px 15px;
   display: inline-block;
-  padding: 10px 30px 10px 30px;
   margin-top: 0;
+  font-weight: 900;
   margin-bottom: 25px;
+  letter-spacing: 10px;
+  position: relative;
+  box-sizing: border-box;
+
+  &:before {
+    content: "";
+    position: absolute;
+    border: 3px solid #ffb300;
+    top: 40px;
+    right: 6px;
+    bottom: 0;
+    width: 25px;
+    height: 25px;
+    border-top: none;
+    border-left: none;
+  }
 }
 
 .button-img {
-   padding: 10px;
-   background: #ffb300;
-   text-transform: uppercase;
-   color: #000000;
-   text-decoration: none!important;
-   font-weight: bold;
+  padding: 10px 35px 10px 35px;
+  font-family: Montserrat-Bold, sans-serif;
+  background: #ffb300;
+  text-transform: uppercase;
+  color: #000000;
+  text-decoration: none!important;
+  font-weight: bold;
  }
 
 .button-img:hover,
 .button-img:active {
-  padding: 10px;
   background: #ffb300;
   color: #000000!important;
 }
@@ -226,7 +260,7 @@
     margin: 0;
     padding: 10px 0 0 0;
     font-size: 30px;
-    //font-family: "Montserrat";
+    font-family: Montserrat-Bold,sans-serif;
     color: #212121;
     font-weight: bold;
     text-transform: uppercase;
@@ -234,7 +268,7 @@
 
   &__desc {
       font-size: 14px;
-      //font-family: "Roboto";
+      font-family: Roboto-Regular, sans-serif;
       color: #666666;
   }
 }
@@ -254,8 +288,7 @@
     top: 10px;
     bottom: 10px;
     left: 10px;
-    right: 10px;
-    width: 97%;
+    width: 350px;
   }
 }
 
@@ -299,12 +332,20 @@
 .services__about-title {
   margin: 0 0 10px 0;
   font-size: 20px;
-  //font-family: "OpenSans";
-  color: rgb(39, 39, 39);
+  font-family: OpenSans-Bold, sans-serif;
+  color: #272727;
   font-weight: bold;
   text-transform: uppercase;
   line-height: 1;
 }
+
+.services__about-desc {
+  font-size: 14px;
+  font-family: OpenSans-Regular, sans-serif;
+  color: #272727;
+  line-height: 1.714;
+}
+// ---- /FIRST SECTION ---- //
 
 // ----- DISTR ---- //
 .distr {
@@ -320,7 +361,7 @@
       position: relative;
       padding-bottom: 20px;
       font-size: 40px;
-      //font-family: "Lato";
+      font-family: Lato-Bold, sans-serif;
       font-weight: bold;
 
       &:before {
@@ -343,10 +384,11 @@
       margin-top: 20px;
       text-transform: uppercase;
       font-size: 18px;
-      //font-family: "Montserrat";
+      font-family: Montserrat-Regular, sans-serif;
     }
   }
 }
+// ----- /DISTR ---- //
 
 // ----- SECOND-SECTION ---- //
 
@@ -377,7 +419,7 @@
     position: relative;
   }
 }
-
+// ----- /SECOND-SECTION ---- //
 
 // ---- FILTER ---- //
 .filter {
@@ -386,8 +428,8 @@
 }
 .filter li {
   font-size: 16px;
-  //font-family: "Roboto";
-  color: #c5c5c5;
+  font-family: Roboto-Regular, sans-serif;
+  color: #212121;
   display: inline;
   font-weight: 500;
   line-height: 1;
@@ -398,7 +440,7 @@
   padding: 0 13px 0 15px;
 }
 .filter li a {
-  color: #656565;
+  color: #212121;
 }
 .filter li a.active,
 .filter li a:hover {
@@ -407,6 +449,7 @@
 .filter li:last-child:after {
   display: none;
 }
+// ---- /FILTER ---- //
 
 // ---- THUMBNAIL ---- //
 
@@ -415,6 +458,10 @@
   position: relative;
   box-shadow: 0 0 10px #ccc;
   min-height: 495px;
+
+  & img {
+    width: 100%;
+  }
 }
 
 .caption {
@@ -422,35 +469,38 @@
   &__title {
     margin-top: 16px;
     font-size: 20px;
-    //font-family: "Montserrat";
-    color: rgb(33, 33, 33);
+    font-family: Montserrat-Bold, sans-serif;
+    color: #272727;
     font-weight: bold;
     line-height: 1.1;
   }
 
   &__desc {
     font-size: 14px;
-    //font-family: "Roboto";
-    color: rgb(102, 102, 102);
+    font-family: Roboto-Regular, sans-serif;
+    color: #666666;
     line-height: 1.357;
   }
 
   &__left-element {
     position: absolute;
     top: 360px;
-    right: 0;
+    right: -1px;
     background: #ffb300;
     padding: 10px;
     line-height: 1;
+    width: 120px;
   }
 
   &__name {
     margin: 0;
     font-size: 12px;
-    //font-family: "Montserrat";
-    color: rgb(255, 255, 255);
+    font-family: Montserrat-Bold, sans-serif;
+    color: #ffffff;
+    text-align: center;
     font-weight: bold;
     text-transform: uppercase;
+
   }
 
 }
@@ -462,11 +512,12 @@
 .building__button {
   position: absolute;
   top: 800px;
-  left: 50%;
-  padding: 10px;
+  left: 45%;
+  padding: 10px 30px 10px 30px;
   background: #ffb300;
   text-transform: uppercase;
   color: #000000;
+  font-family: Montserrat-Bold, sans-serif;
   text-decoration: none!important;
   font-weight: bold;
   border: 0;
@@ -487,16 +538,16 @@
   &__title  {
     margin-top: 60px;
     font-size: 30px;
-    //font-family: "Montserrat";
-    color: rgb(255, 255, 255);
+    font-family: Montserrat-Regular, sans-serif;
+    color: #ffffff;
     line-height: 0.733;
   }
 
   &__desc {
     margin-top: 20px;
     font-size: 18px;
-    //font-family: "Roboto";
-    color: rgb(255, 255, 255);
+    font-family: Roboto-Medium, sans-serif;
+    color: #ffffff;
     line-height: 1.222;
 
     & span {
@@ -507,10 +558,11 @@
   &__button {
     position: absolute;
     top: 75px;
-    left: 50%;
-    padding: 10px;
+    left: 45%;
+    padding: 10px 30px 10px 30px;
     background: #ffb300;
     text-transform: uppercase;
+    font-family: Montserrat-Bold, sans-serif;
     color: #000000;
     text-decoration: none!important;
     font-weight: bold;
@@ -523,34 +575,415 @@
     }
   }
 }
+// ---- /THUMBNAIL ---- //
 
+// ---- THIRD-SECTION ---- //
 .third-section{
   margin-top: 60px;
+
   &__poster {
     position: relative;
 
     & img {
       width: 570px;
-
     }
 
     & p {
       position: absolute;
-      top: 50%;
+      top: 45%;
       left: 140px;
       font-size: 30px;
-      //font-family: "Montserrat";
-      color: rgb(255, 179, 0);
+      font-family: Montserrat-Bold, sans-serif;
+      color: #ffb300;
       font-weight: bold;
       text-transform: uppercase;
-      line-height: 0.8;
     }
   }
 }
 
-form {
+#validForm {
+  padding-left: 30px;
+  margin: 0;
+
   & input {
+    height: 45px;
+  }
+  & textarea {
+    padding-top: 19px;
+    height: 125px;
+    resize: none;
+  }
+
+  & input, textarea {
     width: 100%;
-    margin-bottom: 20px;
+    font-size: 16px;
+    font-family: Roboto-Regular, sans-serif;
+    color: rgb(153, 153, 153);
+    line-height: 1.5;
+    padding-left: 20px;
+    margin-top: 20px;
+    margin-left: 10px;
+    border: solid 1px #f1f1f1;
+  }
+
+}
+
+.validForm__button {
+
+  &-left, &-right {
+    padding: 10px 30px 10px 30px;
+    text-transform: uppercase;
+    color: #000000;
+    font-family: Montserrat-Bold, sans-serif;
+    text-decoration: none!important;
+    font-weight: bold;
+    border: 0;
+    margin-top: 30px;
   }
 }
+
+
+.validForm {
+  &__row {
+    background: #fafafa;
+  }
+
+  &__button-left {
+    background: #ffb300;
+    margin-left: 10px;
+  }
+
+  &__button-right {
+    margin-left: 20px;
+    border: solid 1px #f1f1f1 ;
+    background: #ffffff;
+  }
+}
+// ---- /THIRD-SECTION ---- //
+
+// ---- FOUR-SECTION ---- //
+.four-section {
+  margin-bottom: 100px;
+  &__news {
+    margin-top: 75px;
+    padding-left: 25px;
+    position: relative;
+    box-sizing: border-box;
+
+    &:before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      border: 4px solid #ffb300;
+      width:  25px;
+      height: 60px;
+      border-bottom: none;
+      border-right: none;
+    }
+  }
+}
+
+.news {
+
+  &__name {
+    margin: 0;
+    padding: 10px 0 0 0;
+    font-size: 30px;
+    font-family: Montserrat-Bold, sans-serif;
+    color: #212121;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+
+  &__desc {
+    font-size: 14px;
+    font-family: Roboto-Regular, sans-serif;
+    color: #666666;
+  }
+}
+
+.news {
+  &-block {
+    margin-top: 35px;
+
+    &-down {
+      margin-top: 30px;
+    }
+
+    &__date {
+      float: left;
+      width: 16.7%;
+      padding: 16px 0 17px 0;
+      border: solid 1px #ececec;
+      background: #fafafa;
+      height: 90px;
+
+      &:hover {
+        background: #ffb300;
+        border: solid 1px #f4f4f4;
+
+        & .day {
+          color: #f4f4f4;
+        }
+
+        & .month {
+          color: #f4f4f4;
+        }
+      }
+
+
+    }
+
+    &__filling {
+      width: 83.3%;
+      margin-left: 60px;
+      padding: 20px 0 20px 18px;
+      border: solid 1px #f4f4f4;
+      border-left: none;
+      background: #fafafa;
+      height: 90px;
+    }
+  }
+
+  &-blog {
+    margin-top: 35px;
+    position: relative;
+    background: #fafafa;
+    height: 330px;
+    padding-left: 25px;
+
+    &:before {
+      position: absolute;
+      content: "";
+      top: 20px;
+      bottom: 20px;
+      left: 20px;
+      border: solid 5px #f1f1f1;
+      width: 320px;
+    }
+
+    & p {
+      position: absolute;
+      top: 47%;
+      left: 37%;
+      font-size: 18px;
+      font-family: Montserrat-Bold, sans-serif;
+      color: #ffb300;
+      font-weight: bold;
+      text-align: center;
+      text-transform: uppercase;
+    }
+  }
+}
+
+
+.day,
+.month {
+  text-align: center;
+  font-family: Montserrat-Regular, sans-serif;
+  color: #ffb300;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.day {
+  font-size: 26px;
+  margin: 0;
+
+}
+
+.month {
+  font-size: 14px;
+}
+
+.title {
+  font-size: 18px;
+  font-family: Montserrat-Bold, sans-serif;
+  color: #333333;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+.desc {
+  padding-top: 10px;
+  font-size: 14px;
+  font-family: Montserrat-Regular, sans-serif;
+  color: #ffb300;
+  font-weight: bold;
+}
+
+// ---- /FOUR-SECTION ---- //
+
+// ---- FOOTER ---- //
+.footer {
+  border: solid 3px #ffb300;
+  border-left: none;
+  border-right: none;
+  border-bottom: none;
+  position: relative;
+
+  &__button-up {
+    position: absolute;
+    top: 0;
+    left: 90%;
+    border: 0;
+
+    & a {
+      position: relative;
+      box-sizing: border-box;
+      height: 40px;
+      width: 40px;
+      background: #ffb300;
+
+      &:before {
+        content: "";
+        position: absolute;
+        top: 18px;
+        left: 16px;
+        bottom: 0;
+        border: 2px solid #ffffff;
+        width: 8px;
+        height: 8px;
+        border-bottom: none;
+        border-right: none;
+        transform: rotate(50grad)
+      }
+    }
+
+  }
+
+  &__logo {
+    margin-top: 85px;
+  }
+
+  &__desc {
+    padding-top: 20px;
+    font-size: 14px;
+    font-family: Roboto-Regular, sans-serif;
+    color: #ffffff;
+    line-height: 1.714;
+    text-align: left;
+  }
+
+  &__name {
+    padding-top: 30px;
+    font-size: 40px;
+    font-family:MrsSaintDelafield-Regular, sans-serif;
+    color: #ffffff;
+    line-height: 0.6;
+    text-align: left;
+  }
+
+  &__buttons {
+    padding-top: 30px;
+  }
+
+  &__title {
+    margin-top: 85px;
+    font-size: 20px;
+    font-family: Montserrat-Regular, sans-serif;
+    color: #ffffff;
+    text-transform: uppercase;
+  }
+
+  &__links {
+    margin-top: 25px;
+    padding: 0;
+
+    & li {
+      padding: 12px 0 12px 15px;
+      position: relative;
+      box-sizing: border-box;
+
+      &:before {
+        content: "";
+        position: absolute;
+        top: 18px;
+        left: 0;
+        bottom: 0;
+        border: 2px solid #ffb300;
+        width: 7px;
+        height: 7px;
+        border-bottom: none;
+        border-right: none;
+        transform: rotate(150grad)
+      }
+
+      & a {
+        text-decoration: none;
+        font-size: 14px;
+        font-family: FontAwesome, sans-serif;
+        color: #ffffff;
+
+        &:hover {
+          color: #ffb300;
+        }
+
+      }
+
+    }
+  }
+
+  &__working {
+    margin-top: 30px;
+
+    &-day,
+    &-time {
+      font-size: 14px;
+      color: #ffffff;
+      padding: 10px 0 10px 0;
+    }
+
+    &-day {
+      font-family: Roboto-Regular, sans-serif;
+    }
+
+    &-time {
+      font-family: Lato-Regular, sans-serif;
+    }
+  }
+
+  &__location {
+    font-size: 14px;
+    font-family: Roboto-Regular, sans-serif;
+    color: #ffffff;
+    margin-top: 30px;
+    padding: 10px 0 10px 0;
+
+    & img {
+      padding-right: 15px;
+    }
+  }
+
+  &__email {
+    font-size: 14px;
+    font-family: Roboto-Regular, sans-serif;
+    color: #ffffff;
+    padding: 10px 0 10px 0;
+
+    & img {
+      padding-right: 10px;
+    }
+  }
+
+  &__tel {
+    padding: 10px 0 10px 0;
+
+    & img {
+      padding-right: 10px;
+    }
+
+    & a {
+      text-decoration: none;
+      color: #ffffff;
+      font-size: 14px;
+      font-family: Roboto-Regular, sans-serif;
+    }
+  }
+}
+// ---- /FOOTER ---- //
+
+
