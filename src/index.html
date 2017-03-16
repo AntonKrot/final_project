@@ -2,74 +2,81 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Final Project</title>
+    <title>Rebuild Company</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="image/x-icon" href="/images/favicon.png" />
     <link rel="stylesheet" href="/css/vendor.css">
     <link rel="stylesheet" href="/css/main.css">
 </head>
 <body>
 <div class="wrapper">
+    <!--HEADER-->
     <header class="header">
-        <div class="contact">
-            <p><a name="top"></a></p>
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-3">
-                        <div class="contact__logo">
-                            <a class="logo__link" href="/index.html"><img src="/images/logo.png" alt="Logo"/></a>
-                        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6">
+                    <div class="contact__logo">
+                        <a class="logo__link" href="/index.html"><img src="/images/logo.png" alt="Logo"/></a>
                     </div>
-                    <div class="col-lg-3">
-                        <div class="contact__location">
-                            <div class="location__img">
-                                <img  class="location__img-way" src="/images/location.png" alt="location">
-                                <div class="location__value">
-                                    <h2 class="location__value__name">Location</h2>
-                                    <p class="location__value__map">
-                                        <a class="location__value__link" href="#">See address on map</a>
-                                    </p>
-                                </div>
+                </div>
+                <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6">
+                    <div class="contact__location">
+                        <div class="location__img">
+                            <img  class="location__img-way" src="/images/location.png" alt="location">
+                            <div class="location__value-size">
+                                <h2 class="location__value__name">Location</h2>
+                                <p class="location__value__map">
+                                    <a class="location__value__link" href="#">See address on map</a>
+                                </p>
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-3">
-                        <div class="contact__location">
-                            <div class="location__img">
-                                <img  class="location__img-way" src="/images/clock.png" alt="location">
-                                <div class="location__value">
-                                    <h2 class="location__value__name">Mon - Sun</h2>
-                                    <p class="location__value__map">9:00am - 6:00pm</p>
-                                </div>
+                </div>
+                <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6">
+                    <div class="contact__location">
+                        <div class="location__img">
+                            <img  class="location__img-way" src="/images/clock.png" alt="location">
+                            <div class="location__value">
+                                <h2 class="location__value__name">Mon - Sun</h2>
+                                <p class="location__value__map">9:00am - 6:00pm</p>
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-3">
-                        <div class="contact__location">
-                            <div class="location__img">
-                                <img  class="location__img-way" src="/images/microphone.png" alt="location">
-                                <div class="location__value">
-                                    <h2 class="location__value__name">Call Us Now</h2>
-                                    <p class="location__value__map"><a href="tel:0801881472">801-88-1472</a></p>
-                                </div>
+                </div>
+                <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6">
+                    <div class="contact__location">
+                        <div class="location__img">
+                            <img  class="location__img-way" src="/images/microphone.png" alt="location">
+                            <div class="location__value">
+                                <h2 class="location__value__name">Call Us Now</h2>
+                                <p class="location__value__map"><a href="tel:0801881472">801-88-1472</a></p>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        <nav class="navbar navbar-default">
+        <nav id="custom-bootstrap-menu" class="navbar navbar-default" role="navigation">
+            <div id="sb-search" class="sb-search pull-right">
+                <form>
+                    <input class="sb-search-input" placeholder="What are you searching ?" type="text" value="" name="search" id="search">
+                    <input class="sb-search-submit" type="submit" value="">
+                    <span class="sb-icon-search"></span>
+                </form>
+            </div>
             <div class="container">
                 <div class="navbar-header">
-                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                    <button type="button" class="navbar-toggle " data-toggle="collapse" data-target=".navbar-menubuilder">
                         <span class="sr-only">Toggle navigation</span>
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
                 </div>
-                <div class="collapse navbar-collapse" id="bs-navbar-collapse">
+                <div class="collapse navbar-collapse navbar-menubuilder">
                     <ul class="nav navbar-nav navbar-left">
-                        <li><a href="#">Home</a></li>
-                        <li><a href="#">About</a></li>
+                        <li><a href="/index.html">Home</a></li>
+                        <li><a href="/about.html">About</a></li>
                         <li><a href="#">Project</a></li>
                         <li><a href="#">Services</a></li>
                         <li><a href="#">Portfolio</a></li>
@@ -79,7 +86,6 @@
                 </div>
             </div>
         </nav>
-        <button class="menu__button">Get a Quote</button>
         <div class="slider">
             <div class="container-fluid-pic">
                 <div class="row-pic">
@@ -98,6 +104,7 @@
             </div>
         </div>
     </header>
+    <!--/HEADER-->
     <main class="content">
         <!--FIRST-SECTION-->
         <section class="first-section">
@@ -111,89 +118,87 @@
                     <a href="#" class="btn btn-link button-img"><img src="images/leare__two.png" alt="right btn"></a>
                 </div>
             </div>
-            <div class="container first-section__sevices">
-                <div class="row">
-                    <div class="col-lg-4">
-                        <div class="first-section__row-sec">
-                            <div class="row-second__image">
-                                <img src="/images/row-second__image.png" alt="row-second__image"/>
-                            </div>
+            <div class="first-section__sevices">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12">
+                            <div class="first-section__image"></div>
                         </div>
-                    </div>
-                    <div class="col-lg-4">
-                        <div class="first-section__row-second">
-                            <div class="row-second__services">
-                                <div class="services__image">
-                                    <img class="services__image-way" src="/images/row-second__man.svg" alt="designing">
-                                </div>
-                                <div class="services__about">
-                                    <h3 class="services__about-title">Designing</h3>
-                                    <p class="services__about-desc">Lorem ipsum dolor sit amet, consectetuer adipiscing elit</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4">
-                        <div class="first-section__row-second">
-                            <div class="row-second__services">
-                                <div class="services__image">
-                                    <img class="services__image-way" src="/images/row-second__man.svg" alt="designing">
-                                </div>
-                                <div class="services__about">
-                                    <h3 class="services__about-title">Building</h3>
-                                    <p class="services__about-desc">Lorem ipsum dolor sit amet, consectetuer adipiscing elit</p>
+                        <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12">
+                            <div class="first-section__row-second">
+                                <div class="row-second__services">
+                                    <div class="services__image">
+                                        <img class="services__image-way" src="/images/row-second__man.svg" alt="designing">
+                                    </div>
+                                    <div class="services__about">
+                                        <h3 class="services__about-title">Designing</h3>
+                                        <p class="services__about-desc">Lorem ipsum dolor sit amet, consectetuer adipiscing elit</p>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="col-lg-4">
-                        <div class="first-section__row-second">
-                            <div class="row-second__services">
-                                <div class="services__image">
-                                    <img class="services__image-way" src="/images/row-second__man.svg" alt="designing">
-                                </div>
-                                <div class="services__about">
-                                    <h3 class="services__about-title">Technology</h3>
-                                    <p class="services__about-desc">Lorem ipsum dolor sit amet, consectetuer adipiscing elit</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4">
-                        <div class="first-section__row-second">
-                            <div class="row-second__services">
-                                <div class="services__image">
-                                    <img class="services__image-way" src="/images/row-second__man.svg" alt="designing">
-                                </div>
-                                <div class="services__about">
-                                    <h3 class="services__about-title">Interior Design</h3>
-                                    <p class="services__about-desc">Lorem ipsum dolor sit amet, consectetuer adipiscing elit</p>
+                        <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12">
+                            <div class="first-section__row-second">
+                                <div class="row-second__services">
+                                    <div class="services__image">
+                                        <img class="services__image-way" src="/images/building.svg" alt="designing">
+                                    </div>
+                                    <div class="services__about">
+                                        <h3 class="services__about-title">Building</h3>
+                                        <p class="services__about-desc">Lorem ipsum dolor sit amet, consectetuer adipiscing elit</p>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="col-lg-4">
-                        <div class="first-section__row-second">
-                            <div class="row-second__services">
-                                <div class="services__image">
-                                    <img class="services__image-way" src="/images/row-second__man.svg" alt="designing">
-                                </div>
-                                <div class="services__about">
-                                    <h3 class="services__about-title">Designing</h3>
-                                    <p class="services__about-desc">Lorem ipsum dolor sit amet, consectetuer adipiscing elit</p>
+                        <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12">
+                            <div class="first-section__row-second">
+                                <div class="row-second__services">
+                                    <div class="services__image">
+                                        <img class="services__image-way" src="/images/technology.svg" alt="designing">
+                                    </div>
+                                    <div class="services__about">
+                                        <h3 class="services__about-title">Technology</h3>
+                                        <p class="services__about-desc">Lorem ipsum dolor sit amet, consectetuer adipiscing elit</p>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="col-lg-4">
-                        <div class="first-section__row-second">
-                            <div class="row-second__services">
-                                <div class="services__image">
-                                    <img class="services__image-way" src="/images/row-second__man.svg" alt="designing">
+                        <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12">
+                            <div class="first-section__row-second">
+                                <div class="row-second__services">
+                                    <div class="services__image">
+                                        <img class="services__image-way" src="/images/row-second__man.svg" alt="designing">
+                                    </div>
+                                    <div class="services__about">
+                                        <h3 class="services__about-title">Interior Design</h3>
+                                        <p class="services__about-desc">Lorem ipsum dolor sit amet, consectetuer adipiscing elit</p>
+                                    </div>
                                 </div>
-                                <div class="services__about">
-                                    <h3 class="services__about-title">Uniqe Idea</h3>
-                                    <p class="services__about-desc">Lorem ipsum dolor sit amet, consectetuer adipiscing elit</p>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12 pull-right">
+                            <div class="first-section__row-second">
+                                <div class="row-second__services">
+                                    <div class="services__image">
+                                        <img class="services__image-way" src="/images/technology.svg" alt="designing">
+                                    </div>
+                                    <div class="services__about">
+                                        <h3 class="services__about-title">Designing</h3>
+                                        <p class="services__about-desc">Lorem ipsum dolor sit amet, consectetuer adipiscing elit</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12 pull-right">
+                            <div class="first-section__row-second">
+                                <div class="row-second__services">
+                                    <div class="services__image">
+                                        <img class="services__image-way" src="/images/row-second__man.svg" alt="designing">
+                                    </div>
+                                    <div class="services__about">
+                                        <h3 class="services__about-title">Uniqe Idea</h3>
+                                        <p class="services__about-desc">Lorem ipsum dolor sit amet, consectetuer adipiscing elit</p>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -206,26 +211,26 @@
         <section class="distr">
             <div class="container-fluid">
                 <div class="row">
-                    <div class="col-lg-3">
+                    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
                         <div class="distr__col">
                             <h3 class="distr__col-num">2313</h3>
                             <p class="distr__col-description">Project Done</p>
                         </div>
                     </div>
-                    <div class="col-lg-3">
+                    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
                         <div class="distr__col">
                             <h3 class="distr__col-num">133</h3>
                             <p class="distr__col-description">Win Awards</p>
                         </div>
                     </div>
-                    <div class="col-lg-3">
+                    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
                         <div class="distr__col">
                             <h3 class="distr__col-num">2112</h3>
                             <p class="distr__col-description">Happy Client</p>
                         </div>
                     </div>
-                    <div class="col-lg-3">
-                        <div class="distr__col">
+                    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
+                        <div class="distr__col-bottom">
                             <h3 class="distr__col-num">$8515</h3>
                             <p class="distr__col-description">Last Month Sale</p>
                         </div>
@@ -255,54 +260,56 @@
             </div>
             <div class="container second-section__building">
                 <div class="row">
-                    <div class="col-lg-5">
+                    <div class="col-lg-5 col-md-5 col-sm-5 col-xs-12">
                         <div class="thumbnail">
-                            <img src="/images/thumbnail__img.png" alt="construction">
+                            <img src="/images/construction.jpg" alt="construction">
                             <div class="caption">
-                                <span class="caption__left-element">
+                                <div class="caption__left-element pull-right">
                                     <p class="caption__name">Building</p>
-                                    </span>
+                                </div>
                                 <h3 class="caption__title">Construction New Building</h3>
                                 <p class="caption__desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque enim exercitationem fugiat fugit maxime nam nesciunt porro quibusdam quis similique!</p>
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-3">
+                    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
                         <div class="filling">
-                            <img src="/images/filling__img1.png" alt="" class="filling__img">
+                            <img src="/images/filling__img1.jpg" alt="" class="filling__img">
                         </div>
                     </div>
-                    <div class="col-lg-4">
+                    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
                         <div class="filling">
-                            <img src="/images/filling__img2.png" alt="" class="filling__img">
+                            <img src="/images/filling__img2.jpg" alt="" class="filling__img">
                         </div>
                     </div>
-                    <div class="col-lg-4">
+                    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
                         <div class="filling">
-                            <img src="/images/filling__img3.png" alt="" class="filling__img">
+                            <img src="/images/filling__img3.jpg" alt="" class="filling__img">
                         </div>
                     </div>
-                    <div class="col-lg-3">
+                    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
                         <div class="filling">
-                            <img src="/images/filling__img4.png" alt="" class="filling__img">
+                            <img src="/images/filling__img4.jpg" alt="" class="filling__img">
                         </div>
                     </div>
-                    <div class="col-lg-4">
+                    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
                         <div class="filling">
-                            <img src="/images/filling__img5.png" alt="" class="filling__img">
+                            <img src="/images/filling__img5.jpg" alt="" class="filling__img">
                         </div>
                     </div>
-                    <div class="col-lg-4">
+                    <div class="col-lg-4 col-md-3 col-sm-3 col-xs-12">
                         <div class="filling">
-                            <img src="/images/filling__img5.png" alt="" class="filling__img">
+                            <img src="/images/filling__img6.jpg" alt="" class="filling__img">
                         </div>
                     </div>
-                    <div class="col-lg-4">
+                    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
                         <div class="filling">
-                            <img src="/images/filling__img5.png" alt="" class="filling__img">
+                            <img src="/images/filling__img7.jpg" alt="" class="filling__img">
                         </div>
                     </div>
-                    <button class="building__button">Read more</button>
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 building__button">
+                        <button class="building__button-positioning">Read more</button>
+                    </div>
                 </div>
             </div>
         </section>
@@ -311,12 +318,15 @@
         <section class="work-line">
             <div class="container">
                 <div class="row">
-                    <div class="col-lg-7">
+                    <div class="col-lg-9 col-md-8 col-sm-8 col-xs-12">
                         <h3 class="work-line__title">What are you working on</h3>
                         <p class="work-line__desc">Download <span>PDF File</span> our free Construction <span>pricing planners</span> for you projects</p>
                     </div>
-                    <div class="col-lg-5">
-                        <button class="work-line__button">Read more</button>
+                    <div class="col-lg-3 col-md-4 col-sm-4 col-xs-12">
+                        <div class="work-line__button">
+                            <button class="work-line__button-positioning">Read more</button>
+                            <div class="work-line__button-helper"></div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -326,31 +336,39 @@
         <section class="third-section">
             <div class="container">
                 <div class="row">
-                    <div class="col-lg-6">
+                    <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 validForm__row">
                         <div class="third-section__poster">
                             <img src="/images/third-section.png" alt="third-section">
                             <p>Application Form</p>
                         </div>
                     </div>
                     <form action="#" id="validForm">
-                        <div class="row validForm__row" >
-                            <div class="col-lg-6">
-                                <input id="fullName" type="text" placeholder="Full Name">
-                                <input id="email" type="email" placeholder="Email Address">
-                                <input id="telephone" type="text" placeholder="Contact Number">
-                            </div>
-                            <div class="col-lg-3">
-                                <input id="date" type="datetime" placeholder="Date & Time">
-                            </div>
-                            <div class="col-lg-3">
-                                <input id="bugdet" type="text" placeholder="Your Bugdet">
-                            </div>
-                            <div class="col-lg-6">
-                                <textarea id="message" placeholder="Please Write a Message"></textarea>
-                            </div>
-                            <div class="col-lg-6">
-                                <button class="validForm__button-left">Send Message</button>
-                                <button class="validForm__button-right">Download Form</button>
+                        <div class="container">
+                            <div class="row" >
+                                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                                    <input id="fullName" type="text" placeholder="Full Name">
+                                    <input id="email" type="email" placeholder="Email Address">
+                                    <input id="telephone" type="text" placeholder="Contact Number">
+                                </div>
+                                <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6">
+                                    <input id="date" type="datetime" placeholder="Date & Time">
+                                </div>
+                                <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6">
+                                    <input id="bugdet" type="text" placeholder="Your Bugdet">
+                                </div>
+                                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                                    <textarea id="message" placeholder="Please Write a Message"></textarea>
+                                </div>
+                                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                                    <div class="row validForm__button">
+                                        <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                                            <button class="validForm__button-left">Send Message</button>
+                                        </div>
+                                        <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                                            <button class="validForm__button-right">Download Form</button>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </form>
@@ -362,13 +380,13 @@
         <section class="four-section">
             <div class="container">
                 <div class="row">
-                    <div class="col-lg-12">
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                         <div class="four-section__news pull-left">
                             <h3 class="news__name">Our Latest News</h3>
                             <p class="news__desc">Lorem ispum dolar set ament have a lorem</p>
                         </div>
                     </div>
-                    <div class="col-lg-4">
+                    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 ">
                         <div class="news-block">
                             <div class="news-block__date">
                                 <p class="day">26</p>
@@ -400,12 +418,12 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-4">
+                    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
                         <div class="news-blog">
                             <p>Blog news</p>
                         </div>
                     </div>
-                    <div class="col-lg-4">
+                    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
                         <div class="news-block">
                             <div class="news-block__date">
                                 <p class="day">26</p>
@@ -445,10 +463,9 @@
 </div>
 <!--FOOTER-->
 <footer class="footer">
-    <p class="footer__button-up"><a href="#" id="up">наверх</a></p>
     <div class="container">
         <div class="row">
-            <div class="col-lg-3">
+            <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
                 <div class="footer__logo">
                     <a class="footer__logo-link" href="/index.html"><img src="/images/logo.png" alt="Logo"/></a>
                 </div>
@@ -456,15 +473,23 @@
                 <p class="footer__name">Jhone Smithson</p>
                 <div class="footer__buttons">
                     <a class="btn btn-default" href="#" role="button">
-                        <span class="glyphicon glyphicon-volume-down"></span>
+                        <img src="/images/footer-instagram.png" alt="">
                     </a>
-                    <a class="btn btn-default fa-facebook" href="#" role="button"></a>
-                    <a class="btn btn-default" href="#" role="button">Link</a>
-                    <a class="btn btn-default" href="#" role="button">Link</a>
-                    <a class="btn btn-default" href="#" role="button">Link</a>
+                    <a class="btn btn-default" href="#" role="button">
+                        <img src="/images/footer-twitter.png" alt="">
+                    </a>
+                    <a class="btn btn-default" href="#" role="button">
+                        <img src="/images/footer-mail.png" alt="">
+                    </a>
+                    <a class="btn btn-default" href="#" role="button">
+                        <img src="/images/footer-dribbble.png" alt="">
+                    </a>
+                    <a class="btn btn-default" href="#" role="button">
+                        <img src="/images/footer-dribbble.png" alt="">
+                    </a>
                 </div>
             </div>
-            <div class="col-lg-3">
+            <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
                 <h4 class="footer__title">Quick links</h4>
                 <ul class="footer__links">
                     <li><a href="#">Construction Working of Buldings</a></li>
@@ -474,7 +499,8 @@
                     <li><a href="">Property Law</a></li>
                 </ul>
             </div>
-            <div class="col-lg-3">
+            <div class="clearfix visible-md-block visible-sm-block visible-xs-block"></div>
+            <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
                 <h4 class="footer__title">Working hours</h4>
                 <div class="row footer__working">
                     <div class="col-xs-5 pull-left">
@@ -495,7 +521,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-lg-3">
+            <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
                 <h4 class="footer__title">Contact us</h4>
                 <p class="footer__location"><img src="/images/footer__arrow.png" alt="arrow">1600 Elizabeth St, Melbourne, Victo</p>
                 <p class="footer__email"><img src="/images/footer__email.png" alt="arrow">contact@domain.com</p>
@@ -504,6 +530,7 @@
             </div>
         </div>
     </div>
+    <a href="#" class="back-to-top">Back to Top</a>
 </footer>
 <!--/FOOTER-->
 <script src="/js/vendor.js"></script>

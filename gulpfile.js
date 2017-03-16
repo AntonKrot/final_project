@@ -26,7 +26,11 @@ gulp.task("js:own", function() {
 gulp.task("js:vendor", function() {
     return gulp.src([
         "node_modules/jquery/dist/jquery.js",
-        "node_modules/bootstrap/dist/js/bootstrap.js"
+        "node_modules/bootstrap/dist/js/bootstrap.js",
+        "node_modules/masonry-layout/dist/masonry.pkgd.min.js",
+        "node_modules/bxslider/dist/jquery.bxslider.js",
+        "src/js/search-form/classie.js",
+        "src/js/search-form/uisearch.js"
     ])
         .pipe(concat("vendor.js"))
         .pipe(gulpIf(!isDevelopment, uglify()))
@@ -36,7 +40,10 @@ gulp.task("js:vendor", function() {
 
 gulp.task("css:vendor", function() {
     return gulp.src([
-        "node_modules/bootstrap/dist/css/bootstrap.css"
+        "node_modules/bootstrap/dist/css/bootstrap.css",
+        "node_modules/bxslider/dist/jquery.bxslider.css",
+        "src/css/search-form/component.css",
+        "src/css/search-form/default.css"
     ])
         .pipe(gulpIf(!isDevelopment, nano()))
         .pipe(concat("vendor.css"))
