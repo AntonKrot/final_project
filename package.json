@@ -11,10 +11,16 @@
   "dependencies": {
     "bootstrap": "^3.3.7",
     "bxslider": "^4.2.11",
+    "datatables.net": "^1.10.13",
+    "datatables.net-dt": "^1.10.13",
+    "font-awesome": "^4.7.0",
     "gulp": "^3.9.1",
     "jquery": "^3.1.1",
+    "jquery-datetimepicker": "^2.5.4",
+    "jquery-validation": "^1.16.0",
     "masonry-layout": "^4.1.1",
-    "requirejs": "^2.3.3"
+    "requirejs": "^2.3.3",
+    "toastr": "^2.1.2"
   },
   "devDependencies": {
     "browser-sync": "^2.18.8",

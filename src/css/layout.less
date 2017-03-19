@@ -15,7 +15,7 @@ html, body {
 }
 
 .header {
-  min-height: 715px;
+  max-height: 1000px;
   background: #1c1c1c;
 }
 
@@ -32,11 +32,13 @@ html, body {
 }
 
 .contact__location {
-  display: block;
+  margin-top: 30px;
+  padding: 10px 0 10px 0;
+  font-weight: 600;
 }
 
 .location__img {
-  margin-top: 57px;
+  margin-top: 18px;
   padding-right: 20px;
 
   &-way {
@@ -106,7 +108,12 @@ html, body {
 
   &-toggle {
     float: left!important;
-    margin: 8px 0 8px 15px;
+    margin: 12px 0 12px 15px;
+    background: #ffb300;
+
+    & span {
+      background: #000!important;
+    }
   }
 
   &-header {
@@ -150,6 +157,9 @@ html, body {
 
 .sb-search {
   margin: -1px;
+  position: absolute;
+  right: 0;
+  top: 0;
 
 }
 
@@ -162,7 +172,6 @@ html, body {
 
 // ---- FOOTER ---- //
 .footer {
-<<<<<<< HEAD
   border: solid 3px #ffb300;
   border-left: none;
   border-right: none;
@@ -349,7 +358,6 @@ html, body {
 // ---- BUTTON UP ---- //
 .back-to-top {
   line-height: 30px;
-  height: 50px;
   position: fixed;
   bottom: 40px;
   right: 0;
@@ -363,17 +371,28 @@ html, body {
   padding: 10px;
   display: none;
 
-  &:hover {
+  &:hover, &:focus {
     background-color: #FFC02E;
     text-decoration: none;
   }
-=======
-  height: 400px;
-  margin-top: -100px;
-  clear: both;
-  background: #333333;
->>>>>>> 11f1ffb37704aa38de62bc2faa4efe558e6ecef4
 }
 
 
 // ---- /BUTTON UP ---- //
+
+// ---- VALIDATION FORM ---- //
+.error {
+  padding-left: 10px;
+}
+
+// ---- /VALIDATION FORM ---- //
+
+//------------- MASONRY ------------
+.element-item {
+  padding: 5px;
+
+  & img {
+    width: 100%;
+  }
+}
+//------------- /MASONRY ------------

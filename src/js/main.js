@@ -1,4 +1,8 @@
-/// ------------------------- BXSLIDER --------------------------------
+//===================
+//  BXSLIDER
+//  do not touch
+//===================
+
 $(document).ready(function(){
     $('.bxslider').bxSlider({
         slideWidth: 300,
@@ -8,28 +12,37 @@ $(document).ready(function(){
         slideMargin: 10
     });
 });
-/// -------------------------/BXSLIDER--------------------------------
 
-/// ------------------------- SEARCH-FORM --------------------------------
+//===================
+//  SEARCH-FORM
+//  do not touch
+//===================
+
+
 
 new UISearch( document.getElementById( 'sb-search' ) );
 
-/// -------------------------/SEARCH-FORM--------------------------------
+//===================
+//  MASONRY
+//  do not touch
+//===================
 
-/// ------------------------- MASONRY --------------------------------
 
+$(function(){
 
+    var m = new Masonry($('.grid').get()[0], {
+        columnWidth: ".element-item",
+        itemSelector: ".element-item"
+    });
 
-var $container = $('.grid');
-
-$container.masonry({
-    columnWidth: 200,
-    itemSelector: '.grid-item'
 });
-/// -------------------------/MASONRY--------------------------------
-/// ------------------------- BUTTON UP -----------------------------
+//===================
+//  BUTTON UP
+//  do not touch
+//===================
+
 jQuery(document).ready(function() {
-    var offset = 220;
+    var offset = 800;
     var duration = 500;
     jQuery(window).scroll(function() {
         if (jQuery(this).scrollTop() > offset) {
@@ -45,6 +58,122 @@ jQuery(document).ready(function() {
         return false;
     })
 });
-/// ------------------------- /BUTTON UP -----------------------------
+
+//===================
+//  WOW
+//  do not touch
+//===================
+
+new WOW().init();
 
 
+//===================
+//  VALIDATION
+//  do not touch
+//===================
+
+$(function() {
+    $("form[name='validForm']").validate({
+
+        rules: {
+
+            fullName:{
+                required: true,
+                minlength: 4,
+                maxlength: 16
+            },
+
+            email: {
+                required: true,
+                email: true
+            },
+
+            telephone: {
+                required: true,
+                number: true
+            },
+
+            date: {
+                required: true
+                // date: true
+            },
+
+            bugdet: {
+                required: true,
+                number: true
+            },
+
+            message: {
+                required: true,
+                minlength: 4
+            }
+
+        },
+
+        messages: {
+
+            fullName:{
+                required: "This field is required",
+                minlength: "Name must be at least 4 characters",
+                maxlength: "The maximum number of characters is 16"
+            },
+
+            email: {
+                required: "This field is required",
+                email: "Please enter a valid email address"
+            },
+
+            telephone: {
+                required: "This field is required",
+                number: "Please enter a valid number"
+            },
+
+            date: {
+                required: "This field is required",
+                date: "Please enter a valid date"
+            },
+
+            bugdet: {
+                required: "This field is required",
+                number: "Please enter a valid number"
+            },
+
+            message: {
+                required: "This field is required",
+                minlength: "Name must be at least 4 characters"
+            }
+        },
+
+        submitHandler: function() {
+            toastr.success('Your information are accepted');
+            $('.validForm').get(0).reset();
+        }
+    });
+});
+
+//===================
+// DATETIMEPICKER
+//  do not touch
+//===================
+
+$(function () {
+    $('#date').datetimepicker();
+});
+
+//===================
+// DATATABLE
+//  do not touch
+//===================
+
+$(document).ready(function(){
+    $('#data-table').DataTable({
+        "ajax": "/json/data.json",
+        "cols": [
+            {"data": "fullName"},
+            {"data": "company"},
+            {"data": "phone"},
+            {"data": "address"},
+            {"data": "email"}
+        ]
+    });
+});

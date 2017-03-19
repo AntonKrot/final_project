@@ -29,8 +29,13 @@ gulp.task("js:vendor", function() {
         "node_modules/bootstrap/dist/js/bootstrap.js",
         "node_modules/masonry-layout/dist/masonry.pkgd.min.js",
         "node_modules/bxslider/dist/jquery.bxslider.js",
+        "node_modules/jquery-validation/dist/jquery.validate.js",
+        "node_modules/toastr/build/toastr.min.js",
+        "node_modules/jquery-datetimepicker/build/jquery.datetimepicker.full.min.js",
+        "node_modules/datatables.net/js/jquery.dataTables.js",
         "src/js/search-form/classie.js",
-        "src/js/search-form/uisearch.js"
+        "src/js/search-form/uisearch.js",
+        "src/js/wow/wow.min.js"
     ])
         .pipe(concat("vendor.js"))
         .pipe(gulpIf(!isDevelopment, uglify()))
@@ -42,8 +47,13 @@ gulp.task("css:vendor", function() {
     return gulp.src([
         "node_modules/bootstrap/dist/css/bootstrap.css",
         "node_modules/bxslider/dist/jquery.bxslider.css",
+        "node_modules/toastr/build/toastr.css",
+        "node_modules/font-awesome/css/font-awesome.css",
+        "node_modules/jquery-datetimepicker/build/jquery.datetimepicker.min.css",
+        "node_modules/datatables.net-dt/css/jquery.dataTables.css",
         "src/css/search-form/component.css",
-        "src/css/search-form/default.css"
+        "src/css/search-form/default.css",
+        "src/css/wow/animate.css"
     ])
         .pipe(gulpIf(!isDevelopment, nano()))
         .pipe(concat("vendor.css"))
@@ -67,6 +77,11 @@ gulp.task("css:own", function() {
 gulp.task("html", function() {
     return gulp.src("src/*.html")
         .pipe(gulp.dest("dist"));
+});
+
+gulp.task("json", function() {
+    return gulp.src("src/json/*.json")
+        .pipe(gulp.dest("dist/json"));
 });
 
 gulp.task("image", function () {
@@ -102,5 +117,5 @@ gulp.task("watch", ["build"] ,function () {
     gulp.watch("dist/fonts/*").on("change", sync.reload);
 });
 
-gulp.task("build", ["html", "css", "js", "image", "font"]);
+gulp.task("build", ["html", "css", "js", "json", "image", "font"]);
 gulp.task("default", ["build", "watch"]);
