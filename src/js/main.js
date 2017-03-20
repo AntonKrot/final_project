@@ -9,8 +9,24 @@ $(document).ready(function(){
         minSlides: 3,
         maxSlides: 3,
         moveSlides: 3,
-        slideMargin: 10
+        slideMargin: 10,
+        auto: true,
+        controls: false
     });
+});
+
+//===================
+//  FLICKITY
+//  do not touch
+//===================
+
+$('.main-carousel').flickity({
+    contain: true,
+    freeScroll: true,
+    wrapAround: true,
+    autoPlay: 2500,
+    initialIndex: 2,
+    prevNextButtons: false
 });
 
 //===================
@@ -95,7 +111,6 @@ $(function() {
 
             date: {
                 required: true
-                // date: true
             },
 
             bugdet: {
@@ -176,4 +191,15 @@ $(document).ready(function(){
             {"data": "email"}
         ]
     });
+});
+
+//===================
+// CAROUSEL FIRST SECTION SERVICES
+//  do not touch
+//===================
+
+$(document).ready(function() {
+    $('.carousel').carousel({
+        interval: 6000
+    })
 });

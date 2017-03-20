@@ -33,6 +33,7 @@ gulp.task("js:vendor", function() {
         "node_modules/toastr/build/toastr.min.js",
         "node_modules/jquery-datetimepicker/build/jquery.datetimepicker.full.min.js",
         "node_modules/datatables.net/js/jquery.dataTables.js",
+        "node_modules/flickity/dist/flickity.pkgd.js",
         "src/js/search-form/classie.js",
         "src/js/search-form/uisearch.js",
         "src/js/wow/wow.min.js"
@@ -51,6 +52,7 @@ gulp.task("css:vendor", function() {
         "node_modules/font-awesome/css/font-awesome.css",
         "node_modules/jquery-datetimepicker/build/jquery.datetimepicker.min.css",
         "node_modules/datatables.net-dt/css/jquery.dataTables.css",
+        "node_modules/flickity/dist/flickity.css",
         "src/css/search-form/component.css",
         "src/css/search-form/default.css",
         "src/css/wow/animate.css"

@@ -182,6 +182,7 @@ html, body {
   clear: both;
   background: #120a0f;
 
+
   &__button-up {
     position: absolute;
     top: 0;
@@ -210,11 +211,11 @@ html, body {
         transform: rotate(50grad)
       }
     }
-
   }
 
   &__logo {
     margin-top: 85px;
+    text-align: center;
   }
 
   &__desc {
@@ -223,7 +224,6 @@ html, body {
     font-family: Roboto-Regular, sans-serif;
     color: #ffffff;
     line-height: 1.714;
-    text-align: left;
   }
 
   &__name {
@@ -232,10 +232,11 @@ html, body {
     font-family:MrsSaintDelafield-Regular, sans-serif;
     color: #ffffff;
     line-height: 0.6;
-    text-align: left;
+    text-align: center;
   }
 
   &__buttons {
+    text-align: center;
     padding-top: 30px;
 
     & a {
@@ -252,6 +253,7 @@ html, body {
   }
 
   &__title {
+    text-align: center;
     margin-top: 85px;
     font-size: 20px;
     font-family: Montserrat-Regular, sans-serif;
@@ -260,6 +262,7 @@ html, body {
   }
 
   &__links {
+    margin-left: 25px;
     margin-top: 25px;
     padding: 0;
 
@@ -297,6 +300,7 @@ html, body {
   }
 
   &__working {
+    text-align: center;
     margin-top: 30px;
 
     &-day,
@@ -320,7 +324,7 @@ html, body {
     font-family: Roboto-Regular, sans-serif;
     color: #ffffff;
     margin-top: 30px;
-    padding: 10px 0 10px 0;
+    padding: 10px 0 10px 15px;
 
     & img {
       padding-right: 15px;
@@ -331,7 +335,7 @@ html, body {
     font-size: 14px;
     font-family: Roboto-Regular, sans-serif;
     color: #ffffff;
-    padding: 10px 0 10px 0;
+    padding: 10px 0 10px 15px;
 
     & img {
       padding-right: 10px;
@@ -339,7 +343,7 @@ html, body {
   }
 
   &__tel {
-    padding: 10px 0 10px 0;
+    padding: 10px 0 10px 15px;
 
     & img {
       padding-right: 10px;
@@ -371,6 +375,10 @@ html, body {
   padding: 10px;
   display: none;
 
+  & span {
+    font-size: 35px;
+  }
+
   &:hover, &:focus {
     background-color: #FFC02E;
     text-decoration: none;
@@ -396,3 +404,13 @@ html, body {
   }
 }
 //------------- /MASONRY ------------
+//------------- FLICKITY ------------
+.carousel-cell  {
+  width: 100%!important;
+  margin-right: 10px;
+}
+
+.control-box {
+  margin-right: 5px;
+}
+//------------- /FLICKITY ------------
